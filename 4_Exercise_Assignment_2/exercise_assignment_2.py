@@ -1,7 +1,6 @@
 # EA 2
 # Paul Wade
 
-from itertools import groupby
 
 # CHAPTER 5
 
@@ -43,7 +42,7 @@ print(ans_six)
 
 
 # 9. Use the is_integer method to check if num is an integer and print the value returned by the method (2 pts.).
-num = 15.6 # DO NOT DELETE OR MODIFY THIS LINE OF CODE
+num = 15.6  # DO NOT DELETE OR MODIFY THIS LINE OF CODE
 print(num.is_integer())
 
 
@@ -51,17 +50,19 @@ print(num.is_integer())
 print(pow(5, -3))
 
 
-# 11. Print num_3 so that 3 decimal places are displayed and it is grouped by thousands (1 pt.).
-num_3 = 987654321.123456789 # DO NOT DELETE OR MODIFY THIS LINE OF CODE
-print(round(num_3, 3))
+# 11. Print num_3 so that 3 decimal places are displayed, and it is grouped by thousands (1 pt.).
+num_3 = 987654321.123456789  # DO NOT DELETE OR MODIFY THIS LINE OF CODE
+print("{0:,.3f}".format(num_3))
 
 
-# 12. Write a print statement using an f-string that prints out the following sentence using the variables defined below.
+# 12. Write a print statement using an f-string that prints out the following sentence using the variables
+# defined below.
+#
 # In 2017, New Zealand had a population of 4,793,700 and a life expectancy of 71.61 years. The round function
 # should not be used (2 pts.).
-year = 2017 # DO NOT DELETE OR MODIFY THIS LINE OF CODE
-population = 4793700 # DO NOT DELETE OR MODIFY THIS LINE OF CODE
-expectancy = 71.6143 # DO NOT DELETE OR MODIFY THIS LINE OF CODE
+year = 2017  # DO NOT DELETE OR MODIFY THIS LINE OF CODE
+population = 4793700  # DO NOT DELETE OR MODIFY THIS LINE OF CODE
+expectancy = 71.6143  # DO NOT DELETE OR MODIFY THIS LINE OF CODE
 
-print("In {0}, New Zealand had a population of {1:,} and a life expectancy of {2:.2f} years.".format( year, population, expectancy))
-
+print("In {0}, New Zealand had a population of {1:,} and a life expectancy of {2:.2f} years."
+      .format(year, population, expectancy))
