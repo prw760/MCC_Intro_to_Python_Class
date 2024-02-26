@@ -27,7 +27,7 @@ def calculate_state_tax(amount):
 
 # ***** Start of Main Program *****
 
-sales_amount = float(input("Enter the sales amount: "))
+sales_amount = round(float(input("Enter the sales amount: ")), 2)
 
 
 # calculate/print city, county, state taxes,
