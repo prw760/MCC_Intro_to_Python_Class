@@ -33,8 +33,6 @@ sales_amount = round(float(input("Enter the sales amount: ")), 2)
 # calculate/print city, county, state taxes,
 # and use those values to calculate/print total tax too
 
-print(f"The total tax amount is ${
-						calculate_city_tax(sales_amount) + 
-						calculate_county_tax(sales_amount) + 
-						calculate_state_tax(sales_amount)
-						:.2f}")
+total_tax = calculate_city_tax(sales_amount) + calculate_county_tax(sales_amount) + calculate_state_tax(sales_amount)
+
+print(f"The total tax amount is ${total_tax:.2f}")
