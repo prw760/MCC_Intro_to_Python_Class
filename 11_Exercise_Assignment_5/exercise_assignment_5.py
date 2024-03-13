@@ -21,19 +21,26 @@ if var_1 <= 10:
 var_4 = 24
 
 
-
 # 4. Write an if-else statement that prints out 'Yes you can', if var_4 is greater than 20 and
 # prints out 'No you can not' if it is not greater than 20 (3 pts.).
+
+if var_4 > 20:
+	print("Yes you can")
+else:
+	print("No you can not")
+
+
 # 5. Assign any positive whole number to pulse (1 pt.).
-pulse =
-
-
+pulse = 72
 
 
 # 6. Write an if-else statement that prints 'Your pulse is normal' if pulse
 # is within the range of 60 to 100, inclusively. If pulse is outside the range,
 # print 'Your pulse is not normal' (4 pts.).
-
+if pulse >= 60 and pulse <= 100:
+	print("Your pulse is normal")
+else:
+	print("Your pulse is not normal")
 
 
 # 7. Use the try except keywords to verify that a user has entered a valid int value by
@@ -42,8 +49,7 @@ pulse =
 
 
 
+
 # 8. Import the random module and generate two random integer numbers. The first random number
 # should be between -25 and -60 and the second random number should be between 25 and 75.
 # Print both random numbers (4 pts.).
-
-
