@@ -1,6 +1,8 @@
 # EA 5
 # Paul Wade
 
+import random
+
 # CHAPTER 8
 # 1. Assign any whole number to variable var_1 (1 pt.).
 var_1 = 8
@@ -37,7 +39,7 @@ pulse = 72
 # 6. Write an if-else statement that prints 'Your pulse is normal' if pulse
 # is within the range of 60 to 100, inclusively. If pulse is outside the range,
 # print 'Your pulse is not normal' (4 pts.).
-if pulse >= 60 and pulse <= 100:
+if 60 <= pulse <= 100:
 	print("Your pulse is normal")
 else:
 	print("Your pulse is not normal")
@@ -46,10 +48,19 @@ else:
 # 7. Use the try except keywords to verify that a user has entered a valid int value by
 # prompting the user to enter an integer. If the value is a valid integer, print out 'You entered a valid integer'.
 # If the value is not a valid integer print out 'That is not a valid integer' (3 pts.).
-
-
+try:
+	integer_value = int(input("Enter an Integer Value: "))
+except ValueError:
+	print("That is not a valid integer")
+else:
+	print("You entered a valid integer")
 
 
 # 8. Import the random module and generate two random integer numbers. The first random number
 # should be between -25 and -60 and the second random number should be between 25 and 75.
 # Print both random numbers (4 pts.).
+random_value_1 = random.randrange(-25, -60, -1)
+random_value_2 = random.randrange(25, 75)
+
+print("random_value_1 = ", random_value_1)
+print("random_value_2 = ", random_value_2)
