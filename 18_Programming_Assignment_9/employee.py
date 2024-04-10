@@ -1,9 +1,11 @@
 # Paul Wade
 # PA_9
 
+# Define Employee class including all properties and methods
+
 class Employee:
-	def __init__(self, empID, name, department, yearly_salary):
-		self.employee_number = empID
+	def __init__(self, emp_id, name, department, yearly_salary):
+		self.employee_number = emp_id
 		self.name = name
 		self.department = department
 		self.yearly_salary = yearly_salary
@@ -22,6 +24,9 @@ class Employee:
 		self.yearly_salary = yearly_salary
 
 
+# Prompt User to enter values for the new employee
+# Instantiate the object, and print it
+
 print("Enter the employee information:")
 employee_number = int(input("Enter employee number: "))
 employee_name = str(input("Enter employee name: "))
@@ -32,6 +37,8 @@ myEmployee = Employee(employee_number, employee_name, employee_department, emplo
 
 print(myEmployee)
 
+
+# make changes to both instance functions and reprint myEmployee
 myEmployee.update_department("Finance")
 myEmployee.update_salary(75000)
 
