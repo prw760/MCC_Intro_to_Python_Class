@@ -1,5 +1,5 @@
 # Paul Wade
-# PA 9
+# PA_9
 
 class Employee:
 	def __init__(self, empID, name, department, yearly_salary):
