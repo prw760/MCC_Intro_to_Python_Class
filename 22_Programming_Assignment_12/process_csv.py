@@ -1,3 +1,6 @@
+# Paul Wade
+# PA 12
+
 import csv
 from datetime import datetime
 import math
