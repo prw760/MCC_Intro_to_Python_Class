@@ -5,8 +5,12 @@ import csv
 from datetime import datetime
 import math
 
+# assign constant
 ASSIGNMENT_PATH = (
 	'/users/paulwade/Documents/GitHub/educational/MCC_Intro_to_Python_Class/22_Programming_Assignment_12/ ')
+
+
+# open the data file, read it all into a list, then load up list of keys to be used as search/sort constraint later
 
 with open(ASSIGNMENT_PATH + 'CrudeOil_20212022.csv', newline='\n') as csvfile:
 	csv_reader = csv.DictReader(csvfile, delimiter=',')
@@ -14,8 +18,6 @@ with open(ASSIGNMENT_PATH + 'CrudeOil_20212022.csv', newline='\n') as csvfile:
 	oil_data_list = list(csv_reader)  # fill crude oil price data list
 
 oil_data_list.pop(0)  # delete the first row containing header info
-
-# load up list of keys to be used as search constraint later
 
 month_year_keys = []
 number_of_trading_days = 0
@@ -40,7 +42,7 @@ for oil_data_item in oil_data_list:
 highest_price_results = []
 lowest_price_results = []
 
-# iterate through each month
+# iterate through each year-month, and fill two lists (highest_prices and lowest_prices) with data
 for key_item in month_year_keys:
 
 	this_key = key_item['key']
@@ -73,6 +75,8 @@ for key_item in month_year_keys:
 											'month_name': this_month_name, 'price': this_months_lowest_price})
 
 
+# Output all the high price results by iterating through the list
+
 print("The highest price per month for crude oil (August 2021 - July 2022):")
 
 for high_price_item in highest_price_results:
@@ -82,6 +86,8 @@ for high_price_item in highest_price_results:
 	high_price = '${:,.2f}'.format(high_price_item['price'])
 
 	print(high_price_month_name + " " + high_price_year + "'s highest price was: " + high_price)
+
+# Output all the low price results by iterating through the list
 
 print("\nThe lowest price per month for crude oil (August 2021 - July 2022):")
 
@@ -93,14 +99,17 @@ for low_price_item in lowest_price_results:
 
 	print(low_price_month_name + " " + low_price_year + "'s highest price was: " + low_price)
 
+# Print the aggregates stats as well
+
 print("\nThe number of trading days for the period August 2021 through July 2022:", number_of_trading_days)
 
 print("Total trading volume for the period August 2021 through July 2022:", '{:,}'.format(total_volume))
 
 average_daily_volume = math.floor(total_volume / number_of_trading_days)
 #                              ^^^^^^^^^^
-# JEFFREY: When I rounded with round(), it gave me 332,021,
-# but I wanted to match your results so I used math.floor() here
+# JEFFREY: When I rounded with round(), it gave me 332,022,
+# but I wanted to match your result of 332,021 show in the
+# assignment's screenshots so I used math.floor() here
 
 print("Average daily trading volume for the period August 2021 through July 2022:", '{:,}'.format(average_daily_volume))
 
