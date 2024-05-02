@@ -1,5 +1,6 @@
 import csv
 from datetime import datetime
+import math
 
 ASSIGNMENT_PATH = (
 	'/users/paulwade/Documents/GitHub/educational/MCC_Intro_to_Python_Class/22_Programming_Assignment_12/ ')
@@ -14,6 +15,8 @@ oil_data_list.pop(0)  # delete the first row containing header info
 # load up list of keys to be used as search constraint later
 
 month_year_keys = []
+number_of_trading_days = 0
+total_volume = 0
 
 for oil_data_item in oil_data_list:
 
@@ -26,6 +29,10 @@ for oil_data_item in oil_data_list:
 
 	if key_item not in month_year_keys:
 		month_year_keys.append(key_item)
+
+	number_of_trading_days += 1
+
+	total_volume += int(oil_data_item['Volume'])
 
 highest_price_results = []
 lowest_price_results = []
@@ -82,3 +89,14 @@ for low_price_item in lowest_price_results:
 	low_price = '${:,.2f}'.format(low_price_item['price'])
 
 	print(low_price_month_name + " " + low_price_year + "'s highest price was: " + low_price)
+
+print("\nThe number of trading days for the period August 2021 through July 2022:", number_of_trading_days)
+
+print("Total trading volume for the period August 2021 through July 2022:", '{:,}'.format(total_volume))
+
+average_daily_volume = math.floor(total_volume / number_of_trading_days)
+#                              ^^^^^^^^^^
+# JEFFREY: When I rounded with round(), it gave me 332,021,
+# but I wanted to match your results so I used math.floor() here
+
+print("Average daily trading volume for the period August 2021 through July 2022:", '{:,}'.format(average_daily_volume))
