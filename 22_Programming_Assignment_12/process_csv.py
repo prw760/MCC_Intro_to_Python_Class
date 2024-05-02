@@ -103,3 +103,5 @@ average_daily_volume = math.floor(total_volume / number_of_trading_days)
 # but I wanted to match your results so I used math.floor() here
 
 print("Average daily trading volume for the period August 2021 through July 2022:", '{:,}'.format(average_daily_volume))
+
+# EXTRA CREDIT ANSWER: Russia invaded Ukraine
