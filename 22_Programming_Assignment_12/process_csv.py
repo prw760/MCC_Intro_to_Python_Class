@@ -7,7 +7,7 @@ import math
 
 # assign constant
 ASSIGNMENT_PATH = (
-	'/users/paulwade/Documents/GitHub/educational/MCC_Intro_to_Python_Class/22_Programming_Assignment_12/ ')
+	'/users/paulwade/Documents/GitHub/educational/0_MCC_Intro_to_Python_Class/22_Programming_Assignment_12/ ')
 
 
 # open the data file, read it all into a list, then load up list of keys to be used as search/sort constraint later

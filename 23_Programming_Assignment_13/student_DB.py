@@ -19,7 +19,7 @@ student_data_list = [
 
 # assign path and filename "constants"
 ASSIGNMENT_PATH = (
-    '/users/paulwade/Documents/GitHub/educational/MCC_Intro_to_Python_Class/23_Programming_Assignment_13/ ')
+    '/users/paulwade/Documents/GitHub/educational/0_MCC_Intro_to_Python_Class/23_Programming_Assignment_13/ ')
 DB_FILENAME = 'DSUcollege.db'
 
 
