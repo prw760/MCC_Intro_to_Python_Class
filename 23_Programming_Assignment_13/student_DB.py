@@ -124,3 +124,6 @@ with create_connection() as connection:
 
 # JEFFREY, PLEASE NOTE: My "Students Majoring in Music" list is printed sorted by last_name field.
 # I hope that is okay even though it doesn't exactly match the assignment output screenshot
+
+# ALSO: I don't understand why my python3 installation only allows me to import "sqlite3" and not "sqlite."
+# I hope this doesn't make any difference for the purposes of this assignment.
