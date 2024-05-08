@@ -44,7 +44,7 @@ def server_program():
 			print("Response sent to client")
 
 			conn.close()
-			print("Client connection closed")
+			print("Client connection closed\n")
 
 
 if __name__ == '__main__':

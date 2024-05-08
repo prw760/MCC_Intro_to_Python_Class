@@ -13,9 +13,11 @@ def client_program():
 
 	data = client_socket.recv(1024).decode()
 
-	print('Received from server: ' + data)
+	print("Information received from server:")
+	print(data)
 
 	client_socket.close()  # close the connection
+	print("Connection to server closed")
 
 
 if __name__ == '__main__':
