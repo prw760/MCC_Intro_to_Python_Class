@@ -27,4 +27,28 @@ def server_program():
 
 	server_socket = socket.socket()     # get instance
 
-	server_socket.bind((host, port))    # bind host address and port t
+	server_socket.bind((host, port))    # bind host address and port together
+
+	while True:
+
+		server_socket.listen(2)         # configure how many client the server can listen simultaneously
+
+		while True:
+
+			print("Waiting for connection...")
+
+			conn, address = server_socket.accept()          # accept new connection
+
+			print("...connected from: " + str(address))
+
+			data = sum_3_random_numbers()                   # get the sum of 3 random numbers
+
+			conn.send(data.encode())                        # send the sum to the client
+			print("Response sent to client")
+
+			conn.close()        					        # close the connection
+			print("Client connection closed\n")
+
+
+if __name__ == '__main__':  # if the script is executed directly
+	server_program()           # run the server program

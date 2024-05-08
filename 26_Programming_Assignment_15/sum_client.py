@@ -12,4 +12,14 @@ def client_program():
 	client_socket = socket.socket() 	# instantiate
 	client_socket.connect((host, port)) # connect to the server
 
-	data = client_s
+	data = client_socket.recv(1024).decode()    # receive response
+
+	print("Information received from server:")
+	print(data) # show in terminal
+
+	client_socket.close()  # close the connection
+	print("Connection to server closed")
+
+
+if __name__ == '__main__':    # if the script is executed
+	client_program()            # run the client program
