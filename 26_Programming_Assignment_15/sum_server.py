@@ -12,36 +12,41 @@ def sum_3_random_numbers():
 
 	sum = random_1 + random_2 + random_3
 
-	return_string = (str(random_1) + " + " + str(random_2) + " + " + str(random_3) + " = " + str(sum)
+	return_string = (str(random_1) + " + " + str(random_2) + " + " + str(random_3) + " = " + str(sum))
 
 	return return_string
 
 
 def server_program():
 
-    host = socket.gethostname()
-    port = 9876  # initiate port no above 1024
+	host = socket.gethostname()
+	port = 9877
 
-    server_socket = socket.socket()  # get instance
-    # look closely. The bind() function takes tuple as argument
-    server_socket.bind((host, port))  # bind host address and port together
+	server_socket = socket.socket()
 
-    # configure how many client the server can listen simultaneously
-    server_socket.listen(2)
-    conn, address = server_socket.accept()  # accept new connection
-    print("Connection from: " + str(address))
-    while True:
-        # receive data stream. it won't accept data packet greater than 1024 bytes
-        data = conn.recv(1024).decode()
-        if not data:
-            # if data is not received break
-            break
-        print("from connected user: " + str(data))
-        data = input(' -> ')
-        conn.send(data.encode())  # send data to the client
+	server_socket.bind((host, port))
 
-    conn.close()  # close the connection
+	server_socket.listen(2)
 
+	while True:
 
-if __name__ == '__main__':
-    server_program()
+		print("Waiting for connection...")
+
+		conn, address = server_socket.accept()
+
+		while True:
+
+			server_socket.listen(2)
+
+			conn, address = server_socket.accept()
+
+			print("...connected from: " + str(address))
+
+			data = sum_3_random_numbers()
+
+			conn.send(data.encode())
+			Print("Response sent to client")
+
+			conn.close()
+
+			print("Client connection closed")
