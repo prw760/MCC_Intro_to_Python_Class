@@ -5,7 +5,7 @@ import random
 
 
 # generate 3 random numbers, sum them, and return the sum as a string
-def sum_3_random_numbers():
+def sum_random_numbers():
 
 	random_1 = abs(random.randint(-100, 100))
 	random_2 = abs(random.randint(-100, 100))
@@ -31,7 +31,7 @@ def server_program():
 
 	while True:
 
-		server_socket.listen(2)         # configure how many client the server can listen simultaneously
+		server_socket.listen(4)         # configure how many client the server can listen simultaneously
 
 		while True:
 
@@ -41,7 +41,7 @@ def server_program():
 
 			print("...connected from: " + str(address))
 
-			data = sum_3_random_numbers()                   # get the sum of 3 random numbers
+			data = sum_random_numbers()                   # get the sum of 3 random numbers
 
 			conn.send(data.encode())                        # send the sum to the client
 			print("Response sent to client")
