@@ -1,25 +1,29 @@
 # Paul Wade
 # PA 15
-
 import socket
-import random
 
 
-def server_program():
-	host = socket.gethostname()
-	port = 9876
+def client_program():
 
-	return sum_random_numbers()
+	host = socket.gethostname()  # as both code is running on same pc
+	port = 5000  # socket server port number
+
+	client_socket = socket.socket()  # instantiate
+	client_socket.connect((host, port))  # connect to the server
+
+	message = input(" -> ")  # take input
+
+	while message.lower().strip() != 'bye':
+
+		client_socket.send(message.encode())  # send message
+		data = client_socket.recv(1024).decode()  # receive response
+
+		print('Received from server: ' + data)  # show in terminal
+
+		message = input(" -> ")  # again take input
+
+	client_socket.close()  # close the connection
 
 
-def sum_random_numbers():
-
-	x = abs(random.randint(-100, 100))
-	y = abs(random.randint(-100, 100))
-	z = abs(random.randint(-100, 100))
-
-	total = x + y + z
-
-	result_string = str(x) + " + " + str(y) + " + " + str(z) + " = " + str(total)
-
-	return result_string
+if __name__ == '__main__':
+    client_program()
