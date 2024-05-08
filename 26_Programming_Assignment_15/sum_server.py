@@ -1,6 +1,5 @@
 # Paul Wade
 # PA 15
-
 import socket
 import random
 
