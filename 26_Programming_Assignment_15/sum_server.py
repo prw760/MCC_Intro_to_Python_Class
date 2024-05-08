@@ -10,9 +10,9 @@ def sum_3_random_numbers():
 	random_2 = abs(random.randint(-100, 100))
 	random_3 = abs(random.randint(-100, 100))
 
-	sum = random_1 + random_2 + random_3
+	total = random_1 + random_2 + random_3
 
-	return_string = (str(random_1) + " + " + str(random_2) + " + " + str(random_3) + " = " + str(sum))
+	return_string = (str(random_1) + " + " + str(random_2) + " + " + str(random_3) + " = " + str(total))
 
 	return return_string
 
@@ -20,23 +20,19 @@ def sum_3_random_numbers():
 def server_program():
 
 	host = socket.gethostname()
-	port = 9877
+	port = 9876
 
 	server_socket = socket.socket()
 
 	server_socket.bind((host, port))
 
-	server_socket.listen(2)
-
 	while True:
 
-		print("Waiting for connection...")
-
-		conn, address = server_socket.accept()
+		server_socket.listen(2)
 
 		while True:
 
-			server_socket.listen(2)
+			print("Waiting for connection...")
 
 			conn, address = server_socket.accept()
 
@@ -45,8 +41,11 @@ def server_program():
 			data = sum_3_random_numbers()
 
 			conn.send(data.encode())
-			Print("Response sent to client")
+			print("Response sent to client")
 
 			conn.close()
-
 			print("Client connection closed")
+
+
+if __name__ == '__main__':
+	server_program()

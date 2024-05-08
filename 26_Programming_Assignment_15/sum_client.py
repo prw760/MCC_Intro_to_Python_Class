@@ -6,7 +6,7 @@ import socket
 def client_program():
 
 	host = socket.gethostname()
-	port = 9877
+	port = 9876
 
 	client_socket = socket.socket()
 	client_socket.connect((host, port))
