@@ -1,4 +1,4 @@
-# Paul Wade
+# Paul R. Wade
 # PA 8
 
 # Populate dictionary with student names and grades

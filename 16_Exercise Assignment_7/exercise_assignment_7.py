@@ -1,5 +1,5 @@
 # EA 7
-# Paul Wade
+# Paul R. Wade
 
 # CHAPTER 9 and Sets
 

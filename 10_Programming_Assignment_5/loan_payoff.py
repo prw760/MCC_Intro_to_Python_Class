@@ -1,4 +1,4 @@
-# Paul Wade
+# Paul R. Wade
 # PA 5
 
 # Obtain loan balance, payment, and interest rate values from the user

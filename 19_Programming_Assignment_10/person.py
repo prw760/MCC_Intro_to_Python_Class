@@ -1,4 +1,4 @@
-# Paul Wade
+# Paul R. Wade
 # PA 10
 
 # Class Definitions (Person, Student, Teacher)

@@ -1,4 +1,4 @@
-# Paul Wade
+# Paul R. Wade
 # PA 7
 
 import random

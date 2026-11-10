@@ -1,4 +1,4 @@
-# Paul Wade
+# Paul R. Wade
 # PA 6
 
 grocery_cost = float(input("Enter the cost of your groceries: "))

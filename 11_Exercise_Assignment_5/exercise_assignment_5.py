@@ -1,5 +1,5 @@
 # EA 5
-# Paul Wade
+# Paul R. Wade
 
 import random
 

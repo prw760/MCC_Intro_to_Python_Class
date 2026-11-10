@@ -1,4 +1,4 @@
-# Paul Wade
+# Paul R. Wade
 # PA 3
 
 from math import pi   # need pi for the area & volume calcs below

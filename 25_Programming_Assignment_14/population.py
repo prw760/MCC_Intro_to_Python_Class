@@ -1,4 +1,4 @@
-# Paul Wade
+# Paul R. Wade
 # PA 14
 
 from matplotlib import pyplot as plt

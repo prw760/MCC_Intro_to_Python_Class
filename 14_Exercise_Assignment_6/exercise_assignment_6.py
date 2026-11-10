@@ -1,5 +1,5 @@
 # EA 6
-# Paul Wade
+# Paul R. Wade
 
 # CHAPTER 9
 

@@ -1,5 +1,5 @@
 # PA 2
-# Paul Wade
+# Paul R. Wade
 
 word_1 = input("Enter word one that contains at least 4 letters: ")
 

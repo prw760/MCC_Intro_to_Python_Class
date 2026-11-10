@@ -1,5 +1,5 @@
 # EA 8
-# Paul Wade
+# Paul R. Wade
 
 # CHAPTER 17
 

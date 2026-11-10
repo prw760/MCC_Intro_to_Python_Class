@@ -1,4 +1,4 @@
-# Paul Wade
+# Paul R. Wade
 # PA 13
 
 import sqlite3

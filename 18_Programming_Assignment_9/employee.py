@@ -1,4 +1,4 @@
-# Paul Wade
+# Paul R. Wade
 # PA_9
 
 # Define Employee class including all properties and methods
